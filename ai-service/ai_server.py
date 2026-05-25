@@ -29,7 +29,18 @@ import edge_tts
 import tempfile
 
 app = Flask(__name__)
-CORS(app)
+
+CORS(
+
+    app,
+
+    resources={
+        r"/*": {
+            "origins": "*"
+        }
+    }
+
+)
 
 # ==============================================================================
 # ARABIC PRONUNCIATION MAP
@@ -340,7 +351,13 @@ MIN_SIGN_DURATION    = 8
 # ==============================================================================
 # MAIN INFERENCE ENDPOINT
 # ==============================================================================
-@app.route('/process_frame', methods=['POST'])
+@app.route(
+
+    "/process_frame",
+
+    methods=["POST", "OPTIONS"]
+
+)
 def process_frame():
     if model is None or holistic is None:
         return jsonify({"error": "Model not loaded"}), 503
