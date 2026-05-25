@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>SignBridge — Login</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/login.css"
+  >
+
+</head>
+
+<body>
+
+  <div class="bg-grid"></div>
+
+  <div class="orb o1"></div>
+
+  <div class="orb o2"></div>
+
+
+  <!-- LEFT SIDE -->
+
+  <div class="left">
+
+    <div class="scene">
+
+      <div
+        class="happy-bg"
+        id="happyBg"
+      ></div>
+
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="ring r3"></div>
+
+      <span class="fs">🤟</span>
+      <span class="fs">🖐️</span>
+      <span class="fs">✌️</span>
+      <span class="fs">👐</span>
+
+      <!-- SVG AVATAR -->
+
+      <!-- حط الـ SVG هنا زي ما هو بدون أي تعديل -->
+
+      <div
+        class="chip"
+        id="chip"
+      >
+        😢 Waiting for connection...
+      </div>
+
+    </div>
+
+    <div class="brand-wrap">
+
+      <div class="brand">
+        SignBridge
+      </div>
+
+      <div class="tagline">
+        Breaking barriers · Real-time ESL Communication
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- RIGHT SIDE -->
+
+  <div class="right">
+
+    <div class="fhd">
+
+      <div class="ftitle">
+        Welcome back 👋
+      </div>
+
+      <div class="fsub">
+        Sign in to join your meeting
+      </div>
+
+    </div>
+
+    <div
+      class="err"
+      id="err"
+    ></div>
+
+
+    <div class="field">
+
+      <label>
+        Email
+      </label>
+
+      <input
+        type="text"
+        id="lu"
+        placeholder="you@example.com"
+        autocomplete="Email"
+      >
+
+      <span class="ficon">
+        👤
+      </span>
+
+    </div>
+
+
+    <div class="field">
+
+      <label>
+        Password
+      </label>
+
+      <input
+        type="password"
+        id="lp"
+        placeholder="••••••••"
+        autocomplete="current-password"
+      >
+
+      <span class="ficon">
+        🔒
+      </span>
+
+    </div>
+
+
+    <button
+      class="btn-in"
+      id="loginBtn"
+    >
+      <span>Sign In →</span>
+    </button>
+
+
+    <div class="divider">
+      or
+    </div>
+
+
+    <button
+      class="btn-reg"
+      id="registerBtn"
+    >
+      Create New Account
+    </button>
+
+  </div>
+
+
+  <script
+    type="module"
+    src="../js/auth/login.js"
+  ></script>
+
+</body>
+</html>

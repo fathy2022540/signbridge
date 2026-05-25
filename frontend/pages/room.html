@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>
+    SignBridge Room
+  </title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/meeting.css"
+  >
+
+</head>
+
+<!-- TOASTS -->
+
+<div id="toastContainer"></div>
+<body>
+  <!-- ───────────────────────── -->
+  <!-- LOADING SCREEN -->
+  <!-- ───────────────────────── -->
+
+  <div id="loadingScreen">
+
+    <div class="loader"></div>
+
+    <h2>
+      Connecting...
+    </h2>
+
+    <p id="loadingText">
+
+      Initializing camera & AI
+
+    </p>
+
+  </div>
+
+<div id="callUI">
+
+  <!-- ───────────────────────── -->
+  <!-- TOP BAR -->
+  <!-- ───────────────────────── -->
+
+  <div id="topBar">
+
+    <div class="top-left">
+
+      <div class="brand-small">
+        🤟 SignBridge
+      </div>
+
+      <div class="room-status">
+
+        Real-time accessibility room
+
+      </div>
+
+    </div>
+
+
+    <div class="top-center">
+
+      <span id="participants">
+        0 participants
+      </span>
+
+      <span id="copyStatus">
+        ✔ Link copied
+      </span>
+
+    </div>
+
+
+    <div class="top-actions">
+
+      <button
+        id="aiBtn"
+        class="ai-on"
+      >
+        🤟 AI ACTIVE
+      </button>
+
+      <button
+        class="normal"
+        id="copyBtn"
+      >
+        Copy Link
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ───────────────────────── -->
+  <!-- TTS CONTROLS -->
+  <!-- ───────────────────────── -->
+
+  <div id="tts-controls">
+
+    <h4>
+      🔊 Voice Controls
+    </h4>
+
+    <label>
+      Speed:
+      <span id="rateVal">
+        Normal
+      </span>
+    </label>
+
+    <input
+      type="range"
+      id="ttsRate"
+      min="-2"
+      max="2"
+      step="0.5"
+      value="0"
+    >
+
+    <label>
+      Pitch:
+      <span id="pitchVal">
+        Normal
+      </span>
+    </label>
+
+    <input
+      type="range"
+      id="ttsPitch"
+      min="-2"
+      max="2"
+      step="0.5"
+      value="0"
+    >
+
+    <label>
+      Volume:
+      <span id="volVal">
+        1.0
+      </span>
+    </label>
+
+    <input
+      type="range"
+      id="ttsVol"
+      min="0"
+      max="1"
+      step="0.1"
+      value="1.0"
+    >
+
+    <label>
+      Voice:
+    </label>
+
+    <select id="ttsVoice">
+
+      <option value="female">
+        Salma (Female 🇪🇬)
+      </option>
+
+      <option value="male">
+        Shakir (Male 🇪🇬)
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- ───────────────────────── -->
+  <!-- EMPTY STATE -->
+  <!-- ───────────────────────── -->
+
+  <div id="emptyState">
+
+    <div class="empty-icon">
+      📡
+    </div>
+
+    <h2>
+      Waiting for someone to join...
+    </h2>
+
+    <p>
+
+      Share your room link
+      and start communicating instantly
+
+    </p>
+
+  </div>
+
+
+  <!-- ───────────────────────── -->
+  <!-- VIDEOS -->
+  <!-- ───────────────────────── -->
+
+  <div id="videos"></div>
+
+
+  <!-- ───────────────────────── -->
+  <!-- CONTROLS -->
+  <!-- ───────────────────────── -->
+
+  <div id="controls">
+
+    <button
+      id="micBtn"
+      class="active"
+    >
+      🎤 Mic
+    </button>
+
+    <button
+      id="camBtn"
+      class="active"
+    >
+      📷 Camera
+    </button>
+
+    <button
+      class="normal"
+      id="leaveBtn"
+    >
+      🚪 Leave
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- ───────────────────────── -->
+<!-- LIBRARIES -->
+<!-- ───────────────────────── -->
+
+<script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+
+<script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+
+
+<!-- ───────────────────────── -->
+<!-- MAIN -->
+<!-- ───────────────────────── -->
+
+<script
+  type="module"
+  src="../js/meeting/main.js"
+></script>
+
+</body>
+</html>

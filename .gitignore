@@ -1,0 +1,16 @@
+node_modules
+
+.env
+
+backend/.env
+
+ai-service/__pycache__
+
+ai-service/sign_env
+
+venv
+
+__pycache__
+
+
+*.pyc

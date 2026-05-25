@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>
+    SignBridge Dashboard
+  </title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/dashboard.css"
+  />
+
+</head>
+
+<body>
+
+<div class="card">
+
+  <!-- LOGOUT -->
+  <button
+    id="logoutBtn"
+    class="logout-btn"
+  >
+    Logout
+  </button>
+
+
+  <!-- LOGO -->
+  <div class="logo">
+    🤟
+  </div>
+
+
+  <!-- TITLE -->
+  <h1>
+    SignBridge
+  </h1>
+
+  <p>
+    Real-time AI communication
+    between deaf and hearing people
+  </p>
+
+
+  <!-- AI TOGGLE -->
+  <div class="ai-box">
+
+    <input
+      type="checkbox"
+      id="aiToggle"
+    >
+
+    <label for="aiToggle">
+
+      Enable Sign Detection
+
+    </label>
+
+  </div>
+
+
+  <!-- CREATE ROOM -->
+  <button
+    class="create"
+    id="createRoomBtn"
+  >
+    🤟 Create Sign Room
+  </button>
+
+
+  <!-- ROOM INPUT -->
+  <input
+    id="roomIdInput"
+    placeholder="Enter room ID"
+  >
+
+
+  <!-- JOIN ROOM -->
+  <button
+    class="join"
+    id="joinRoomBtn"
+  >
+    Join Room
+  </button>
+
+
+  <!-- FOOTER -->
+  <div class="footer">
+
+    Powered by WebRTC,
+    AI Vision & Speech Recognition
+
+  </div>
+
+</div>
+
+
+<script
+  type="module"
+  src="../js//meeting/dashboard.js"
+></script>
+
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    SignBridge — Create Account
+  </title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/register.css"
+  >
+
+</head>
+
+<body>
+
+  <div class="bg-grid"></div>
+
+  <div class="bg-orb1"></div>
+
+  <div class="bg-orb2"></div>
+
+
+  <div class="register-container">
+
+    <div class="register-card">
+
+      <!-- LEFT -->
+
+      <div class="card-left">
+
+        <div class="steps-title">
+          Setup steps
+        </div>
+
+        <div
+          class="step-item active"
+          id="step-indicator-1"
+        >
+          <div class="step-dot">
+            1
+          </div>
+
+          <div class="step-label">
+            Your Profile
+          </div>
+        </div>
+
+
+        <div
+          class="step-item"
+          id="step-indicator-2"
+        >
+          <div class="step-dot">
+            2
+          </div>
+
+          <div class="step-label">
+            Security
+          </div>
+        </div>
+
+
+        <div
+          class="step-item"
+          id="step-indicator-3"
+        >
+          <div class="step-dot">
+            3
+          </div>
+
+          <div class="step-label">
+            Preferences
+          </div>
+        </div>
+
+
+        <!-- MINI AVATAR -->
+
+        <div
+          class="mini-avatar"
+          style="margin-top:30px;"
+        >
+
+          <!-- حط الـ SVG زي ما هو -->
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT -->
+
+      <div class="card-right">
+
+        <div class="progress-bar-track">
+
+          <div
+            class="progress-bar-fill"
+            id="progressFill"
+          ></div>
+
+        </div>
+
+
+        <div class="form-header">
+
+          <div
+            class="form-title"
+            id="formTitle"
+          >
+            Create your account
+          </div>
+
+          <div
+            class="form-sub"
+            id="formSub"
+          >
+            Let's start with the basics
+          </div>
+
+        </div>
+
+
+        <div
+          class="error-box"
+          id="errorBox"
+        ></div>
+
+
+        <!-- STEP 1 -->
+
+        <div
+          class="step-panel active"
+          id="panel-1"
+        >
+
+          <div class="field-row">
+
+            <div class="field">
+
+              <label>
+                First Name
+              </label>
+
+              <input
+                type="text"
+                id="firstName"
+                placeholder="Nour"
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label>
+                Last Name
+              </label>
+
+              <input
+                type="text"
+                id="lastName"
+                placeholder="Ahmed"
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="field">
+
+            <label>
+              Username
+            </label>
+
+            <input
+              type="text"
+              id="regUser"
+              placeholder="your_username"
+            >
+
+            <div
+              class="field-hint"
+              id="userHint"
+            >
+              This is your unique identifier
+            </div>
+
+          </div>
+
+
+          <div class="field">
+
+            <label>
+              Email (optional)
+            </label>
+
+            <input
+              type="email"
+              id="regEmail"
+              placeholder="you@example.com"
+            >
+
+          </div>
+
+
+          <div class="btn-row">
+
+            <div class="spacer"></div>
+
+            <button
+              class="btn-primary"
+              id="toStep2Btn"
+            >
+              <span>
+                Continue →
+              </span>
+            </button>
+
+          </div>
+
+
+          <div class="link-login">
+
+            Already have an account?
+
+            <a id="goLoginBtn">
+              Sign in
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- STEP 2 -->
+
+        <div
+          class="step-panel"
+          id="panel-2"
+        >
+
+          <div class="field">
+
+            <label>
+              Password
+            </label>
+
+            <input
+              type="password"
+              id="regPass"
+              placeholder="Create a strong password"
+            >
+
+            <div class="strength-bar">
+
+              <div
+                class="strength-seg"
+                id="seg1"
+              ></div>
+
+              <div
+                class="strength-seg"
+                id="seg2"
+              ></div>
+
+              <div
+                class="strength-seg"
+                id="seg3"
+              ></div>
+
+              <div
+                class="strength-seg"
+                id="seg4"
+              ></div>
+
+            </div>
+
+            <div
+              class="field-hint"
+              id="strengthHint"
+            >
+              Use 8+ characters with numbers & symbols
+            </div>
+
+          </div>
+
+
+          <div class="field">
+
+            <label>
+              Confirm Password
+            </label>
+
+            <input
+              type="password"
+              id="regPass2"
+              placeholder="Repeat your password"
+            >
+
+            <div
+              class="field-hint"
+              id="matchHint"
+            ></div>
+
+          </div>
+
+
+          <div class="btn-row">
+
+            <button
+              class="btn-ghost"
+              id="backStep1Btn"
+            >
+              ← Back
+            </button>
+
+            <div class="spacer"></div>
+
+            <button
+              class="btn-primary"
+              id="toStep3Btn"
+            >
+              <span>
+                Continue →
+              </span>
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- STEP 3 -->
+
+        <div
+          class="step-panel"
+          id="panel-3"
+        >
+
+          <div class="field">
+
+            <label>
+              Display Name
+            </label>
+
+            <input
+              type="text"
+              id="displayName"
+              placeholder="How others will see you"
+            >
+
+          </div>
+
+
+          <div class="field">
+
+            <label>
+              I primarily use
+            </label>
+
+            <select id="userRole">
+
+              <option value="deaf">
+                Sign language
+              </option>
+
+              <option value="interpreter">
+                Interpreter
+              </option>
+
+              <option value="hearing">
+                Hearing
+              </option>
+
+              <option value="student">
+                Student
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="field">
+
+            <label>
+              Preferred TTS Voice
+            </label>
+
+            <select id="prefVoice">
+
+              <option value="female">
+                Salma — Female 🇪🇬
+              </option>
+
+              <option value="male">
+                Shakir — Male 🇪🇬
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="btn-row">
+
+            <button
+              class="btn-ghost"
+              id="backStep2Btn"
+            >
+              ← Back
+            </button>
+
+            <div class="spacer"></div>
+
+            <button
+              class="btn-primary"
+              id="registerBtn"
+            >
+              <span>
+                Create Account ✨
+              </span>
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- SUCCESS -->
+
+        <div
+          class="success-screen"
+          id="successScreen"
+        >
+
+          <div class="success-icon">
+            🎉
+          </div>
+
+          <div class="success-title">
+            Welcome to SignBridge!
+          </div>
+
+          <div
+            class="success-sub"
+            id="successName"
+          >
+            Your account is ready.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script
+    type="module"
+    src="../js/auth/register.js"
+  ></script>
+
+</body>
+</html>
