@@ -1,14 +1,9 @@
 export const AI_SERVER =
-  "http://localhost:5001";
+  "https://pyaphone-kinetic-savor.ngrok-free.dev";
 
-export const IS_LOCAL = (
 
-  window.location.hostname ===
-    "localhost"
+// ─────────────────────────
+// AI ENABLED EVERYWHERE
+// ─────────────────────────
 
-  ||
-
-  window.location.hostname ===
-    "127.0.0.1"
-
-);
+export const IS_LOCAL = true;
